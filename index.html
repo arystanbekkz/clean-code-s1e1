@@ -1,19 +1,65 @@
-<html>
-<HEAD><title>Todo App</title>
-<link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" href="style.css" type="text/css" MEDIA="screen" charset="utf-8">
-</HEAD>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" media="screen">
+  <title>Todo App</title>
+</head>
 <body>
-<div class="aaa"><img src="./eisenhower-matrix.jpg"><a class='more_inf' href="https://goal-life.com/page/method/matrix-eisenhower">Want more details&quest;</a></div>
-<div class="centered-main-page-element"><p id='topSectionForAddingElementToList'><label for="new-task">Add Item</label><div class="task-row-wrapper"><input id='new-task'class="task" type="text"><button>Add</button></div>
-</p><h3>Todo</h3>
-<ul id='incompleteTasks'>
-<li><input type='checkbox'><label class="task">Pay Bills</label><input type="text" class="task"><button class="edit">Edit</button><button class="delete"><img src="./remove.svg"></button></li>
-<li class="editMode"><input type="checkbox"><label class="task">Go Shopping</label><input type="text" value="Go Shopping" class="task"><button class='edit'>Save</button><button class="delete"><img src="./remove.svg"></button></li>
-</ul><h3>Completed</h3><ul id="completed-tasks"><li><input type="checkbox" checked><label class="task">See the Doctor</label><input type="text" class="task"><button class="edit">Edit</button><button class="delete"><img src="./remove.svg"></button>
-</li>
-</ul>
-</div>
-<script type="text/javascript" SRC="app.js"></script>
+  <header class="app-header">
+    <img class="app-banner" src="./eisenhower-matrix.jpg" alt="eisenhower-matrix">
+    <a class="app-info" href="https://goal-life.com/page/method/matrix-eisenhower">
+      Want more details?
+    </a>
+  </header>
+  <main class="todo-app">
+    <section class="add-task">
+      <label for="new-task" class="add-task__label">Add Item</label>
+      <div class="add-task__row">
+        <input id="new-task" class="input text-input add-task__input" type="text">
+        <button id="add-task-button" class="add-task__button">Add</button>
+      </div>
+    </section>
+    <section class="active-tasks">
+      <h3 class="section-title">Todo</h3>
+      <ul id="active-tasks" class="active-tasks tasks-list">
+        <li class="task">
+          <input type="checkbox" class="input task__checkbox">
+          <label class="task__label">Pay Bills</label>
+          <input type="text" class="input text-input task__text">
+          <button class="button task__edit">Edit</button>
+          <button class="button task__delete">
+            <img class="delete__icon" src="./remove.svg" alt="remove-icon">
+          </button>
+        </li>
+        <li class="task task_edit">
+          <input type="checkbox" class="input task__checkbox">
+          <label class="task__label">Go Shopping</label>
+          <input type="text" value="Go Shopping" class="input text-input task__text">
+          <button class="button task__edit">Save</button>
+          <button class="button task__delete">
+            <img class="delete__icon" src="./remove.svg" alt="remove-icon">
+          </button>
+        </li>
+      </ul>
+    </section>
+    <section class="completed-tasks">
+      <h3 class="section-title">Completed</h3>
+      <ul id="completed-tasks" class="completed-tasks tasks-list">
+        <li class="task">
+          <input type="checkbox" checked class="input task__checkbox">
+          <label class="task__label">See the Doctor</label>
+          <input type="text" class="input text-input task__text">
+          <button class="button task__edit">Edit</button>
+          <button class="button task__delete">
+            <img class="delete__icon" src="./remove.svg" alt="remove-icon">
+          </button>
+        </li>
+      </ul>
+    </section>
+  </main>
+  <script src="app.js"></script>
 </body>
 </html>
